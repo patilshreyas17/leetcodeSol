@@ -1,5 +1,14 @@
-class Solution {
-  public:
+class Solution {class Solution {
+public:
+    string countAndSay(int n) {
+        if(n==1) return "1";
+        string prev = countAndSay(n-1);
+        int count =1;
+        string res="";
+        for(int i=0;i<prev.length();i++){
+            if(i+1 < prev.length()&& prev[i]==prev[i+1]) count++;
+            else{
+public:
   
   string proc(string &s){
       int count =1;
@@ -29,3 +38,4 @@ class Solution {
         
     }
 };
+
